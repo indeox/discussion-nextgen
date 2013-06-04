@@ -23,7 +23,7 @@ a {
 .d-comment {
 	font-family: sans-serif;
 }
-.d-comment--blocked .d-comment__inner {
+.d-comment--blocked > .d-comment__inner {
 	opacity: .5;
 }
 .d-comment__inner {
