@@ -132,9 +132,5 @@ a {
 }
 
 .d-comment__action {
-	font-weight: bold;
-}
-.d-comment__action--report {
-	color: #b3b3b4;
 	font-size: .85714285714em;
 }
