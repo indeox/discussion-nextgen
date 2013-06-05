@@ -18,10 +18,12 @@ a {
 	padding-left: 0;
 }
 .d-thread .d-thread {
-	padding-left: 51px; /* aligns with top level comment's body */
+	padding-left: 39px; /* aligns with top level comment's body */
+	border-left: 12px solid #cfcfcd;
 }
 .d-comment {
 	font-family: sans-serif;
+	border-top: 1px solid #cfcfcd;
 }
 .d-comment--blocked > .d-comment__inner {
 	opacity: .5;
@@ -35,10 +37,6 @@ a {
 	padding-right: 4px;
 	margin-left: -4px;
 	margin-right: -4px;
-}
-.d-thread .d-thread .d-comment,
-.d-comment + .d-comment {
-	border-top: 1px solid #cfcfcd;
 }
 
 .d-comment__author-status,
@@ -58,6 +56,12 @@ a {
 }
 .d-comment__author {
 	font-family: "EgyptianText",georgia,serif;
+}
+
+@media (min-width: 768px) {
+	.d-comment__author {
+		font-size: 1.28571428571em;
+	}
 }
 .d-comment__time {
 	color: #767676;
@@ -79,7 +83,10 @@ a {
 }
 .d-comment__body blockquote {
 	color: #767676;
-	margin-left: 16px;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 14px;
+	border-left: 2px solid #cfcfcd;
 }
 
 
