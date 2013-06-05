@@ -32,15 +32,36 @@ a {
 	padding-top: 4px;
 }
 .d-comment:target > .d-comment__inner {
-	background: #eee;
+	background: rgba(149, 177, 202, .3);
 	padding-left: 4px;
 	padding-right: 4px;
 	margin-left: -4px;
 	margin-right: -4px;
 }
 
-.d-comment__author-status,
-.d-comment__pick { display: none; }
+.d-comment__pick {
+
+}
+
+/* Banner preceeding a comment */
+.d-comment-banner {
+	position: relative;
+	padding: .1em .33333em;
+	background: rgb(149, 177, 202);
+	color: #fff;
+	font-size: 18px;
+	margin-bottom: 2px;
+}
+.d-comment-banner__label {
+	font: bold 1em/1 EgyptianHeadline, Georgia, serif;
+}
+.d-comment-banner__icon {
+	position: absolute;
+	display: block;
+	top: .1em;
+	right: .5em;
+}
+
 .d-comment__header {
 	margin-top: -2px;
 }
@@ -62,10 +83,18 @@ a {
 	.d-comment__author {
 		font-size: 1.28571428571em;
 	}
+	.d-comment__author + .d-badge {
+		top: -.15em;
+	}
 }
-.d-comment__time {
+.d-comment__action {
 	color: #767676;
 	font-size: .85714285714em;
+}
+
+.d-meta-separator {
+	color: #aaa;
+	font-size: .85714285714em;	
 }
 
 .d-comment__main {
@@ -140,4 +169,40 @@ a {
 
 .d-comment__action {
 	font-size: .85714285714em;
+}
+
+
+/* Badges */
+.d-badge:after {
+	display: inline-block;
+	position: relative;
+	top: -.1em;
+	background: #005689;
+	color: #fff;
+	font: bold 13px/.9 EgyptianHeadline, Georgia, serif;
+	width: 1em;
+	height: 1em;
+	margin-left: .2em;
+	vertical-align: middle;
+	text-align: center;
+	cursor: help;
+}
+.d-badge__label {
+	/* Hide the label but not to screen readers */
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.d-badge--contributor:after {
+	content: 'c';
+	text-indent: -1px;
+}
+.d-badge--guardian-staff:after {
+	content: 'g';
+	line-height: .7;
 }
