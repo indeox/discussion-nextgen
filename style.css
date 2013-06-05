@@ -43,7 +43,7 @@ a {
 
 }
 
-/* Banner preceeding a comment */
+/* Banner preceeding a comment (eg: Guardian Pick) */
 .d-comment-banner {
 	position: relative;
 	padding: .1em .33333em;
@@ -74,6 +74,9 @@ a {
 
 .d-comment__meta {
 	line-height: 1.3;
+	word-break: break-all;
+	word-break: break-word;
+	word-wrap: break-word;
 }
 .d-comment__author {
 	font-family: "EgyptianText",georgia,serif;
